@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from database import collection
+from database import collection, FACEBOOK_POLICIES
 from embeddings import embed_text
-from data import FACEBOOK_POLICIES
 from routes.view_db import router as view_db_router
 
 def embed_and_store_policies():
