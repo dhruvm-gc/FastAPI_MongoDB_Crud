@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from models import User, UpdateUser
-from database import collection
+from Crud_op.models import User, UpdateUser
+from Crud_op.database import collection
 from bson import ObjectId
 
 router = APIRouter()
@@ -30,8 +30,9 @@ def get_user(user_id: str):
     user["_id"] = str(user["_id"])
     return user
 
-@router.put("/users/{user_id}")
+@router.patch("/users/{user_id}")
 def update_user(user_id: str, user: UpdateUser):
+
     updated = collection.update_one(
         {"_id": ObjectId(user_id)},
         {"$set": {k: v for k, v in user.dict().items() if v is not None}}

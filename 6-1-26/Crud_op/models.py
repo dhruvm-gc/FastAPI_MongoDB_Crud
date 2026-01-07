@@ -6,7 +6,8 @@ class User(BaseModel):
     age: int
     email: EmailStr
 
+
 class UpdateUser(BaseModel):
-    name: Optional[str]
-    age: Optional[int]
-    email: Optional[EmailStr]
+    name: Optional[str] = None
+    age: Optional[int] = None
+    email: Optional[EmailStr] = None
