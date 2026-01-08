@@ -3,7 +3,7 @@ import ast
 
 def embed_text(text: str):
     response = ollama.embeddings(
-        model="nomic-embed-text",
+        model="mxbai-embed-large",
         prompt=text
     )
 
