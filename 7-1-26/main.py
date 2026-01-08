@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(
-    title="Ollama + ChromaDB Policy Vector API",
+    title="Ollama with VectorDB",
     lifespan=lifespan
 )
 
@@ -37,3 +37,12 @@ app.include_router(view_db_router)
 @app.get("/")
 def root():
     return {"status": "running"}
+
+@app.get("/search")
+def search_policy(query: str):
+    query_embedding = embed_text(query)
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=1)
+    return {"query": query, "matches": results["documents"]}
+    
