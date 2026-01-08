@@ -1,7 +1,0 @@
-ids,embeddings,embedding_length,embedding_preview
-fb_policy_0,"Facebook Community Standards define what content is allowed or prohibited, including rules on violence, hate speech, and misinformation.",3,"0.1,0.2,0.3"
-fb_policy_1,"Facebook Data Privacy Policy explains how user data is collected, stored, and used for personalization, security, and advertising purposes.",3,"0.1,0.2,0.3"
-fb_policy_2,"Facebook Advertising Policy restricts misleading, deceptive, or harmful advertisements and enforces transparency for advertisers.",3,"0.1,0.2,0.3"
-fb_policy_3,"Facebook Content Moderation Policy governs the removal of content that violates platform rules such as hate speech, nudity, or violent material.",3,"0.1,0.2,0.3"
-fb_policy_4,Facebook Intellectual Property Policy requires users to respect copyrights and trademarks and allows removal of infringing content.,3,"0.1,0.2,0.3"
-fb_policy_5,"Facebook Account Integrity Policy prohibits fake accounts, impersonation, and coordinated inauthentic behavior.",3,"0.1,0.2,0.3"
